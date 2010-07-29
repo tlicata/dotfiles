@@ -14,8 +14,11 @@
 (setq frame-title-format
       (concat  "%b - emacs@" system-name))
 
-;; put my emacs settings in load-path
+;; add emacs stuff to load-path
 (add-to-list 'load-path "/home/tlicata/.emacsfiles")
+
+;; disable menu bar 
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 ;; magit.el
 (require 'magit)
