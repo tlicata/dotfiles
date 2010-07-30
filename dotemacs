@@ -14,8 +14,8 @@
 (setq frame-title-format
       (concat  "%b - emacs@" system-name))
 
-;; add emacs stuff to load-path
-(add-to-list 'load-path "/home/tlicata/.emacsfiles")
+;; put my emacs settings in load-path
+(add-to-list 'load-path "~/.emacsfiles")
 
 ;; disable menu bar 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -24,3 +24,13 @@
 (require 'magit)
 (global-set-key (kbd "C-c l") 'magit-log)
 (global-set-key (kbd "C-c s") 'magit-status)
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))
