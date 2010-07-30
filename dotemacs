@@ -15,7 +15,7 @@
       (concat  "%b - emacs@" system-name))
 
 ;; put my emacs settings in load-path
-(add-to-list 'load-path "/home/tlicata/.emacsfiles")
+(add-to-list 'load-path "~/.emacsfiles")
 
 ;; magit.el
 (require 'magit)
