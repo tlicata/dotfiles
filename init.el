@@ -15,7 +15,7 @@
       (concat  "%b - emacs@" system-name))
 
 ;; put my emacs settings in load-path
-(add-to-list 'load-path "~/.emacsfiles")
+(add-to-list 'load-path "~/.emacs.d")
 
 ;; disable menu bar 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
