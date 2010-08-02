@@ -16,6 +16,7 @@
 
 ;; put my emacs settings in load-path
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/espresso")
 
 ;; disable menu bar 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -24,6 +25,11 @@
 (require 'magit)
 (global-set-key (kbd "C-c l") 'magit-log)
 (global-set-key (kbd "C-c s") 'magit-status)
+
+;; Javascript
+(autoload #'espresso-mode "espresso" "Start espresso-mode" t)
+(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 
 ;;; This was installed by package-install.el.
 ;;; This provides support for the package system and
