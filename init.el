@@ -17,6 +17,7 @@
 ;; put my emacs settings in load-path
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/espresso")
+(add-to-list 'load-path "~/.emacs.d/las3r")
 
 ;; disable menu bar 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -25,6 +26,11 @@
 (require 'magit)
 (global-set-key (kbd "C-c l") 'magit-log)
 (global-set-key (kbd "C-c s") 'magit-status)
+
+;; las3r
+(require 'las3r-mode)
+(add-to-list 'auto-mode-alist '("\\.as$" . las3r-mode))
+(add-to-list 'auto-mode-alist '("\\.lsr$" . las3r-mode))
 
 ;; Javascript
 (autoload #'espresso-mode "espresso" "Start espresso-mode" t)
