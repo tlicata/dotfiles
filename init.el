@@ -16,11 +16,17 @@
 
 ;; put my emacs settings in load-path
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/espresso")
 (add-to-list 'load-path "~/.emacs.d/las3r")
 
 ;; disable menu bar 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+
+;; auto-complete
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
+(ac-config-default)
 
 ;; magit.el
 (require 'magit)
