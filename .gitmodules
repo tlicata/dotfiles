@@ -1,0 +1,3 @@
+[submodule "ac-slime"]
+	path = ac-slime
+	url = git://github.com/purcell/ac-slime.git
