@@ -16,6 +16,7 @@
 
 ;; put my emacs settings in load-path
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/ac-slime")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/espresso")
 (add-to-list 'load-path "~/.emacs.d/las3r")
@@ -27,6 +28,10 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
 (ac-config-default)
+
+;; slime auto-complete & docs
+(require 'ac-slime)
+(add-hook 'slime-mode-hook 'set-up-slime-ac)
 
 ;; magit.el
 (require 'magit)
