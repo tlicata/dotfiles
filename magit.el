@@ -1233,20 +1233,7 @@ TITLE is the displayed title of the section."
 (defvar magit-highlighted-section nil)
 
 (defun magit-highlight-section ()
-  "Highlight current section if it have a type."
-  (let ((section (magit-current-section)))
-    (when (not (eq section magit-highlighted-section))
-      (setq magit-highlighted-section section)
-      (if (not magit-highlight-overlay)
-	  (let ((ov (make-overlay 1 1)))
-	    (overlay-put ov 'face 'magit-item-highlight)
-	    (setq magit-highlight-overlay ov)))
-      (if (and section (magit-section-type section))
-	  (move-overlay magit-highlight-overlay
-			(magit-section-beginning section)
-			(magit-section-end section)
-			(current-buffer))
-	(delete-overlay magit-highlight-overlay)))))
+  "Highlight current section if it have a type.")
 
 (defun magit-section-context-type (section)
   (if (null section)
