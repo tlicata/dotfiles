@@ -17,12 +17,20 @@
 ;; put my emacs settings in load-path
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/ac-slime")
+(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/espresso")
 (add-to-list 'load-path "~/.emacs.d/las3r")
 
 ;; disable menu bar 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+
+;; color-theme
+(require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-hober)))
 
 ;; auto-complete
 (require 'auto-complete-config)
