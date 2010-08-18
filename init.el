@@ -34,6 +34,10 @@
      (color-theme-initialize)
      (color-theme-lawrence)))
 
+;; shell properly colors directories
+(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+
 ;; auto-complete
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
