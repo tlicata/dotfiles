@@ -14,6 +14,8 @@
 (setq frame-title-format
       (concat  "%b - emacs@" system-name))
 
+(setq-default tab-width 4)
+
 ;; put my emacs settings in load-path
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/ac-slime")
