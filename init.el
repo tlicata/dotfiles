@@ -32,7 +32,7 @@
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
-     (color-theme-hober)))
+     (color-theme-lawrence)))
 
 ;; auto-complete
 (require 'auto-complete-config)
