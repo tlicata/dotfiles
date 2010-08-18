@@ -23,6 +23,7 @@
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/espresso")
 (add-to-list 'load-path "~/.emacs.d/las3r")
+(add-to-list 'load-path "~/.emacs.d/undo-tree")
 
 ;; disable menu bar 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -46,6 +47,10 @@
 ;; slime auto-complete & docs
 (require 'ac-slime)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
+
+;; undo-tree
+(require 'undo-tree)
+;(global-undo-tree-mode)
 
 ;; magit.el
 (require 'magit)
