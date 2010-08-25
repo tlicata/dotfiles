@@ -23,6 +23,7 @@
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/espresso")
 (add-to-list 'load-path "~/.emacs.d/las3r")
+(add-to-list 'load-path "~/.emacs.d/sanityinc")
 (add-to-list 'load-path "~/.emacs.d/undo-tree")
 
 ;; disable menu bar 
@@ -34,6 +35,10 @@
   '(progn
      (color-theme-initialize)
      (color-theme-lawrence)))
+
+;; sanity inc color-theme
+(require 'color-theme-autoloads)
+(autoload 'color-theme-sanityinc-light "color-theme-sanityinc" "A light color theme" t)
 
 ;; shell properly colors directories
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
