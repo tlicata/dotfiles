@@ -35,7 +35,7 @@
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
-     (color-theme-lawrence)))
+     (color-theme-euphoria)))
 
 ;; sanity inc color-theme
 (require 'color-theme-autoloads)
