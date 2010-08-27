@@ -13,3 +13,5 @@ git submodule init
 git submodule update
 
 3) Start emacs
+
+4) Undo-tree will be slow unless byte compiled.  M-x byte-compile-file <ENTER> undo-tree.el <ENTER>
