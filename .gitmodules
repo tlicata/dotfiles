@@ -7,3 +7,6 @@
 [submodule "undo-tree"]
 	path = undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
+[submodule "magit"]
+	path = magit
+	url = git://github.com/philjackson/magit.git

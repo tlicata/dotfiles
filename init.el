@@ -19,10 +19,11 @@
 ;; put my emacs settings in load-path
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/ac-slime")
-(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/espresso")
 (add-to-list 'load-path "~/.emacs.d/las3r")
+(add-to-list 'load-path "~/.emacs.d/magit")
 (add-to-list 'load-path "~/.emacs.d/sanityinc")
 (add-to-list 'load-path "~/.emacs.d/undo-tree")
 
