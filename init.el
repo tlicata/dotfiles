@@ -65,9 +65,9 @@
 (global-set-key (kbd "C-c s") 'magit-status)
 
 ;; las3r
-(require 'actionscript-mode)
+(require 'ecmascript-mode)
 (require 'las3r-mode)
-(add-to-list 'auto-mode-alist '("\\.as$" . actionscript-mode))
+(add-to-list 'auto-mode-alist '("\\.as$" . ecmascript-mode))
 (add-to-list 'auto-mode-alist '("\\.lsr$" . las3r-mode))
 
 ;; Javascript
