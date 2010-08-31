@@ -14,4 +14,16 @@ git submodule update
 
 3) Start emacs
 
+Optional:
+
 4) Undo-tree will be slow unless byte compiled.  M-x byte-compile-file <ENTER> undo-tree.el <ENTER>
+
+5) Make Caps Lock act as another Ctrl key.
+
+(On Ubuntu) -> System Menu -> Preferences -> Keyboard -> Layouts tab -> Options button ->
+Ctrl key position -> Make CapsLock an additional Ctrl.
+
+6) If terminal has a menu bar then Menu Access keys can interfere with emacs META commands.  For
+instance, M-f will open the File menu instead of moving forward a word.
+
+In terminal menu bar -> Edit -> Keyboard Shortcuts -> Uncheck "Enable menu access keys".
