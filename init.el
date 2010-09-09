@@ -65,16 +65,15 @@
 (global-set-key (kbd "C-c l") 'magit-log)
 (global-set-key (kbd "C-c s") 'magit-status)
 
-;; las3r
+;; Actionscript
 (require 'ecmascript-mode)
 (require 'las3r-mode)
 (add-to-list 'auto-mode-alist '("\\.as$" . ecmascript-mode))
 (add-to-list 'auto-mode-alist '("\\.lsr$" . las3r-mode))
 
 ;; Javascript
-(autoload #'espresso-mode "espresso" "Start espresso-mode" t)
-(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . ecmascript-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . ecmascript-mode))
 
 ;;; This was installed by package-install.el.
 ;;; This provides support for the package system and
