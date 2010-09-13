@@ -27,3 +27,7 @@ Ctrl key position -> Make CapsLock an additional Ctrl.
 instance, M-f will open the File menu instead of moving forward a word.
 
 In terminal menu bar -> Edit -> Keyboard Shortcuts -> Uncheck "Enable menu access keys".
+
+Notes:
+
+* M-x query-replace RET C-q C-M RET RET (gets rid of "^M"s in code)
