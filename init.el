@@ -48,6 +48,8 @@
 ;; slime auto-complete & docs
 (require 'ac-slime)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
+;; prevents warning at slime startup
+(eval-after-load 'slime '(setq slime-protocol-version 'ignore))
 
 ;; undo-tree
 (require 'undo-tree)
