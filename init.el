@@ -22,6 +22,9 @@
 (add-to-list 'load-path "~/.emacs.d/sanityinc")
 (add-to-list 'load-path "~/.emacs.d/undo-tree")
 
+;; open in current window
+(add-to-list 'same-window-buffer-names "*Buffer List*")
+
 ;; disable menu bar 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
