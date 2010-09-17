@@ -33,7 +33,7 @@
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
-     (color-theme-euphoria)))
+     (color-theme-lethe)))
 
 ;; sanity inc color-theme
 (require 'color-theme-autoloads)
