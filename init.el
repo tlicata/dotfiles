@@ -64,8 +64,10 @@
 (require 'magit)
 (global-set-key (kbd "C-c l") 'magit-log)
 (global-set-key (kbd "C-c s") 'magit-status)
-(set-face-background 'magit-item-highlight "blue")
 (set-face-foreground 'magit-diff-add "green")
+(set-face-foreground 'magit-diff-del "red")
+(set-face-foreground 'magit-header "blue")
+(set-face-background 'magit-item-highlight nil)
 
 ;; Actionscript
 (require 'ecmascript-mode)
