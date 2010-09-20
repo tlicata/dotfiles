@@ -25,8 +25,10 @@
 ;; open in current window
 (add-to-list 'same-window-buffer-names "*Buffer List*")
 
-;; disable menu bar 
+;; disable bars 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 
 ;; color-theme
 (require 'color-theme)
