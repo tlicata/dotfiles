@@ -68,7 +68,7 @@
 (global-set-key (kbd "C-c s") 'magit-status)
 (set-face-foreground 'magit-diff-add "green")
 (set-face-foreground 'magit-diff-del "red")
-(set-face-foreground 'magit-header "blue")
+(set-face-foreground 'magit-header "orange")
 (set-face-background 'magit-item-highlight nil)
 
 ;; Actionscript
