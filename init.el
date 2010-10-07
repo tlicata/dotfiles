@@ -92,6 +92,9 @@
        (let* ((fn-list (dired-get-marked-files nil arg)))
          (mapc 'find-file fn-list)))))
 
+;; Open the file under point in shell
+(global-set-key (kbd "C-M-f") 'find-file-at-point)
+
 ;;; This was installed by package-install.el.
 ;;; This provides support for the package system and
 ;;; interfacing with ELPA, the package archive.
