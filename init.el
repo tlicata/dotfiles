@@ -19,6 +19,7 @@
 (add-to-list 'load-path "~/.emacs.d/espresso")
 (add-to-list 'load-path "~/.emacs.d/las3r")
 (add-to-list 'load-path "~/.emacs.d/magit")
+(add-to-list 'load-path "~/.emacs.d/mo-git-blame")
 (add-to-list 'load-path "~/.emacs.d/sanityinc")
 (add-to-list 'load-path "~/.emacs.d/undo-tree")
 
@@ -80,6 +81,11 @@
 (set-face-foreground 'magit-diff-del "red")
 (set-face-foreground 'magit-header "orange")
 (set-face-background 'magit-item-highlight nil)
+;; mo-git-blame.el
+(autoload 'mo-git-blame-file "mo-git-blame" nil t)
+(autoload 'mo-git-blame-current "mo-git-blame" nil t)
+(global-set-key (kbd "C-c b") 'mo-git-blame-current)
+(global-set-key (kbd "C-c C-b") 'mo-git-blame-file)
 
 ;; Actionscript
 (require 'ecmascript-mode)
