@@ -74,6 +74,12 @@
 (global-set-key (kbd "C-c u") 'undo-tree-undo)
 (global-set-key (kbd "C-c r") 'undo-tree-redo)
 
+;; direct window movement
+(global-set-key (kbd "M-<right>") 'windmove-right)
+(global-set-key (kbd "M-<left>") 'windmove-left)
+(global-set-key (kbd "M-<up>") 'windmove-up)
+(global-set-key (kbd "M-<down>") 'windmove-down)
+
 ;; magit.el
 (require 'magit)
 (global-set-key (kbd "C-c l") 'magit-log)
