@@ -54,7 +54,8 @@
 (add-hook 'completion-setup-hook
   (lambda () (run-at-time 2 nil
     (lambda () (kill-buffer "*Completions*")))))
-
+;; open a shell buffer on startup
+(shell)
 
 ;; auto-complete
 (require 'auto-complete-config)
@@ -107,8 +108,6 @@
        (interactive "P")
        (let* ((fn-list (dired-get-marked-files nil arg)))
          (mapc 'find-file fn-list)))))
-
-(shell)
 
 ;;; This was installed by package-install.el.
 ;;; This provides support for the package system and
