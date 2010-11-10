@@ -58,6 +58,10 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
 (ac-config-default)
 
+;; erc
+(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"))
+(setq erc-hide-list '("JOIN" "NICK" "PART" "QUIT"))
+
 ;; slime auto-complete & docs
 (require 'ac-slime)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
