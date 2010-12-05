@@ -50,7 +50,9 @@
 ;; properly colors directories
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-;; open a shell buffer on startup
+;; prevent welcome screen from displaying
+;; and open a shell buffer in its place.
+(setq inhibit-splash-screen t)
 (shell)
 
 ;; auto-complete
