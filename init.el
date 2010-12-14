@@ -10,6 +10,8 @@
 
 ;; default tab-width is 8
 (setq-default tab-width 4)
+;; no tabs
+(setq indent-tabs-mode nil)
 
 ;; put my emacs settings in load-path
 (add-to-list 'load-path "~/.emacs.d")
