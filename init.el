@@ -83,6 +83,9 @@
 (global-set-key (kbd "M-<left>") 'windmove-left)
 (global-set-key (kbd "M-<up>") 'windmove-up)
 (global-set-key (kbd "M-<down>") 'windmove-down)
+;; window history
+(when (fboundp 'winner-mode)
+  (winner-mode 1))
 
 ;; magit.el
 (require 'magit)
