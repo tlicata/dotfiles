@@ -18,7 +18,7 @@
 (add-to-list 'load-path "~/.emacs.d/ac-slime")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
-(add-to-list 'load-path "~/.emacs.d/espresso")
+(add-to-list 'load-path "~/.emacs.d/js")
 (add-to-list 'load-path "~/.emacs.d/las3r")
 (add-to-list 'load-path "~/.emacs.d/magit")
 (add-to-list 'load-path "~/.emacs.d/mo-git-blame")
