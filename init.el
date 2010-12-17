@@ -107,6 +107,11 @@
 ;; Javascript
 (add-to-list 'auto-mode-alist '("\\.js$" . ecmascript-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . ecmascript-mode))
+; mozrepl
+(autoload 'moz-minor-mode "moz" "Mozilla Minor and Inferior Mozilla Modes" t)
+(add-hook 'ecmascript-mode-hook 'ecmascript-custom-setup)
+(defun ecmascript-custom-setup ()
+  (moz-minor-mode 1))
 
 ;; Dired
 ;; http://stackoverflow.com/questions/1110118/in-emacs-dired-how-to-find-visit-multiple-files
