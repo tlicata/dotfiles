@@ -72,6 +72,12 @@
 ;; prevents warning at slime startup
 (eval-after-load 'slime '(setq slime-protocol-version 'ignore))
 
+;; paredit
+(require 'paredit)
+(add-hook 'clojure-mode-hook 'clojure-mode-setup)
+(defun clojure-mode-setup ()
+  (paredit-mode t))
+
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
