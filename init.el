@@ -108,12 +108,13 @@
 (add-to-list 'auto-mode-alist '("\\.lsr$" . las3r-mode))
 
 ;; Javascript
-(add-to-list 'auto-mode-alist '("\\.js$" . ecmascript-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . ecmascript-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
+(autoload 'espresso-mode "espresso" nil t)
 ; mozrepl
 (autoload 'moz-minor-mode "moz" "Mozilla Minor and Inferior Mozilla Modes" t)
-(add-hook 'ecmascript-mode-hook 'ecmascript-custom-setup)
-(defun ecmascript-custom-setup ()
+(add-hook 'espresso-mode-hook 'espresso-custom-setup)
+(defun espresso-custom-setup ()
   (moz-minor-mode 1))
 
 ;; Dired
