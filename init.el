@@ -17,6 +17,7 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/ac-slime")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/clojure")
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/js")
 (add-to-list 'load-path "~/.emacs.d/las3r")
@@ -87,6 +88,12 @@
 (global-set-key (kbd "C-x S") 'save-current-configuration)
 (global-set-key (kbd "C-x F") 'resume)
 (global-set-key (kbd "C-x K") 'wipe)
+
+;; parenthesis highlighting
+(require 'highlight-parentheses)
+(add-hook 'clojure-mode-hook 'clojure-mode-setup)
+(defun clojure-mode-setup ()
+  (highlight-parentheses-mode t))
 
 ;; undo-tree
 (require 'undo-tree)
