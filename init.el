@@ -89,9 +89,6 @@
 (global-set-key (kbd "C-x F") 'resume)
 (global-set-key (kbd "C-x K") 'wipe)
 
-;; comments
-(global-set-key (kbd "C-o") 'comment-region)
-(global-set-key (kbd "C-i") 'uncomment-region)
 ;; parenthesis highlighting
 (require 'highlight-parentheses)
 (add-hook 'clojure-mode-hook 'clojure-mode-setup)
