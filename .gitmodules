@@ -10,6 +10,3 @@
 [submodule "magit"]
 	path = magit
 	url = git://github.com/philjackson/magit.git
-[submodule "mo-git-blame"]
-	path = mo-git-blame
-	url = git://git.bunkus.org/mo-git-blame.git
