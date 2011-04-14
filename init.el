@@ -18,6 +18,7 @@
 (add-to-list 'load-path "~/.emacs.d/ac-slime")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/clojure")
+(add-to-list 'load-path "~/.emacs.d/coffee")
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/js")
 (add-to-list 'load-path "~/.emacs.d/las3r")
@@ -125,6 +126,9 @@
 (add-to-list 'auto-mode-alist '("\\.lsr$" . las3r-mode))
 
 ;; Javascript
+(require 'coffee-mode)
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 (autoload 'espresso-mode "espresso" nil t)
