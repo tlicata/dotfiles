@@ -10,3 +10,6 @@
 [submodule "magit"]
 	path = magit
 	url = git://github.com/philjackson/magit.git
+[submodule "coffee"]
+	path = coffee
+	url = git://github.com/defunkt/coffee-mode.git
