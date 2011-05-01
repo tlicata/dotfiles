@@ -13,3 +13,6 @@
 [submodule "coffee"]
 	path = coffee
 	url = git://github.com/defunkt/coffee-mode.git
+[submodule "clojure/durendal"]
+	path = clojure/durendal
+	url = git://github.com/technomancy/durendal.git
