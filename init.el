@@ -51,19 +51,6 @@
 (require 'color-theme-autoloads)
 (autoload 'color-theme-sanityinc-light "color-theme-sanityinc" "A light color theme" t)
 
-
-;;; shell
-
-;; open the file under point
-(global-set-key (kbd "C-M-f") 'find-file-at-point)
-;; properly colors directories
-(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-;; prevent welcome screen from displaying
-;; and open a shell buffer in its place.
-(setq inhibit-splash-screen t)
-(shell)
-
 ;; org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (global-set-key "\C-cl" 'org-store-link)
@@ -157,3 +144,14 @@
        (let* ((fn-list (dired-get-marked-files nil arg)))
          (mapc 'find-file fn-list)))))
 
+;;; shell
+
+;; open the file under point
+(global-set-key (kbd "C-M-f") 'find-file-at-point)
+;; properly colors directories
+(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+;; prevent welcome screen from displaying
+;; and open a shell buffer in its place.
+(setq inhibit-splash-screen t)
+(shell)
