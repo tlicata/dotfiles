@@ -20,11 +20,16 @@
 (add-to-list 'load-path "~/.emacs.d/clojure")
 (add-to-list 'load-path "~/.emacs.d/coffee")
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
+(add-to-list 'load-path "~/.emacs.d/elpa")
 (add-to-list 'load-path "~/.emacs.d/js")
 (add-to-list 'load-path "~/.emacs.d/las3r")
 (add-to-list 'load-path "~/.emacs.d/magit")
 (add-to-list 'load-path "~/.emacs.d/sanityinc")
 (add-to-list 'load-path "~/.emacs.d/undo-tree")
+
+;; ELPA
+(load "package")
+(package-initialize)
 
 ;; open in current window
 (add-to-list 'same-window-buffer-names "*Buffer List*")
@@ -149,12 +154,3 @@
        (let* ((fn-list (dired-get-marked-files nil arg)))
          (mapc 'find-file fn-list)))))
 
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
