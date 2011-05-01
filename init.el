@@ -18,6 +18,7 @@
 (add-to-list 'load-path "~/.emacs.d/ac-slime")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/clojure")
+(add-to-list 'load-path "~/.emacs.d/clojure/durendal")
 (add-to-list 'load-path "~/.emacs.d/coffee")
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/elpa")
@@ -123,6 +124,8 @@
 (set-face-foreground 'magit-diff-del "red")
 (set-face-foreground 'magit-header "orange")
 (set-face-background 'magit-item-highlight nil)
+
+(require 'durendal)
 
 ;; Actionscript
 (require 'ecmascript-mode)
