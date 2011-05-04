@@ -113,6 +113,12 @@
 (set-face-background 'magit-item-highlight nil)
 
 (require 'durendal)
+(defun durendal-jack-in-with-coffee (&optional port-prompt)
+  "Does durendal-jack-in plus watches & autocompiles coffeescript changes."
+  (interactive "P")
+  (durendal-jack-in port-prompt)
+  (let ((root (locate-dominating-file default-directory "project.clj")))
+	(shell-command (format "cd %s && coffee -w -o ./war/js/bin -c ./src/tl/coffee &" root))))
 
 ;; Actionscript
 (require 'ecmascript-mode)
