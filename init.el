@@ -111,6 +111,9 @@
 (set-face-foreground 'magit-diff-del "red")
 (set-face-foreground 'magit-header "orange")
 (set-face-background 'magit-item-highlight nil)
+; open status is current buffer
+(custom-set-variables
+ '(magit-status-buffer-switch-function 'switch-to-buffer))
 
 (require 'durendal)
 (defun durendal-jack-in-with-coffee (&optional port-prompt)
