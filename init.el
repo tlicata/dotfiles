@@ -103,6 +103,15 @@
 (when (fboundp 'winner-mode)
   (winner-mode 1))
 
+;; chromebook has no delete key, so make C-w
+;; backward-kill-word if there is no region.
+(defun unix-werase-or-kill (arg)
+      (interactive "*p")
+      (if (and transient-mark-mode mark-active)
+		  (kill-region (region-beginning) (region-end))
+		(backward-kill-word arg)))
+(global-set-key (kbd "C-w") 'unix-werase-or-kill)
+
 ;; magit.el
 (require 'magit)
 (global-set-key (kbd "C-c l") 'magit-log)
