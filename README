@@ -31,3 +31,8 @@ In terminal menu bar -> Edit -> Keyboard Shortcuts -> Uncheck "Enable menu acces
 Notes:
 
 * M-x query-replace RET C-q C-M RET RET (gets rid of "^M"s in code)
+
+7) EMMS relies on external media players.  On Ubuntu, installing mplayer allowed
+me to player mp3s.  Otherwise I got "Don't know how to play track" errors.
+
+sudo apt-get install mplayer

@@ -22,6 +22,7 @@
 (add-to-list 'load-path "~/.emacs.d/coffee")
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/elpa")
+(add-to-list 'load-path "~/.emacs.d/emms/lisp")
 (add-to-list 'load-path "~/.emacs.d/js")
 (add-to-list 'load-path "~/.emacs.d/las3r")
 (add-to-list 'load-path "~/.emacs.d/magit")
@@ -173,3 +174,8 @@
 ;; and open a shell buffer in its place.
 (setq inhibit-splash-screen t)
 (shell)
+
+;; emms
+(require 'emms-setup)
+(emms-standard)
+(emms-default-players)
