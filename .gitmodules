@@ -16,3 +16,6 @@
 [submodule "clojure/durendal"]
 	path = clojure/durendal
 	url = git://github.com/technomancy/durendal.git
+[submodule "emms"]
+	path = emms
+	url = git://git.sv.gnu.org/emms.git
