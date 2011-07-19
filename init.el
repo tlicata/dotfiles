@@ -177,5 +177,10 @@
 
 ;; emms
 (require 'emms-setup)
+(require 'emms-volume)
 (emms-standard)
 (emms-default-players)
+(global-set-key (kbd "C-c m") 'emms-playlist-mode-go)
+(global-set-key (kbd "C-c t") 'emms-play-directory-tree)
+(global-set-key (kbd "C-c u") 'emms-volume-raise)
+(global-set-key (kbd "C-c d") 'emms-volume-lower)
