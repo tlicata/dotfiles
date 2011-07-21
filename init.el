@@ -180,6 +180,7 @@
 (require 'emms-volume)
 (emms-standard)
 (emms-default-players)
+(add-hook 'emms-player-started-hook 'emms-show)
 (global-set-key (kbd "C-c m") 'emms-playlist-mode-go)
 (global-set-key (kbd "C-c t") 'emms-play-directory-tree)
 (global-set-key (kbd "C-c u") 'emms-volume-raise)
