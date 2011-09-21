@@ -145,6 +145,7 @@
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp$" . espresso-mode))
 (autoload 'espresso-mode "espresso" nil t)
 ; mozrepl
 (autoload 'moz-minor-mode "moz" "Mozilla Minor and Inferior Mozilla Modes" t)
