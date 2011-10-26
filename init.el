@@ -63,6 +63,9 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
 (ac-config-default)
 
+;; iswitchb
+(iswitchb-mode 1)
+
 ;; erc
 (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"))
 (setq erc-hide-list '("JOIN" "NICK" "PART" "QUIT"))
