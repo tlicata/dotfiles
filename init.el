@@ -12,6 +12,8 @@
 (setq-default tab-width 4)
 ;; no tabs
 (setq-default indent-tabs-mode nil)
+;; highight trailing whitespace
+(setq-default show-trailing-whitespace t)
 
 ;; put my emacs settings in load-path
 (add-to-list 'load-path "~/.emacs.d")
