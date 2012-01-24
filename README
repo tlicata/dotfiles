@@ -2,6 +2,14 @@ This is my emacs configuration tree.
 
 To use it:
 
+0) Install emacs.
+
+To get the emacs24 (not officially released yet), I did:
+
+sudo add-apt-repository ppa:cassou/emacs
+sudo apt-get update
+sudo apt-get install emacs-snapshot
+
 1) Clone this repository to ~/.emacs.d. If ~/.emacs.d already exists then back it up first.
 
 git clone <repo_url> ~/.emacs.d
