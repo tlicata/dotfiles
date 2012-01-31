@@ -173,6 +173,8 @@
 
 ;; open the file under point
 (global-set-key (kbd "C-M-f") 'find-file-at-point)
+;; next command in pattern from history
+(global-set-key (kbd "<f12>") 'comint-get-next-from-history)
 ;; properly colors directories
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
