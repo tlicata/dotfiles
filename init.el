@@ -29,7 +29,6 @@
 (add-to-list 'load-path "~/.emacs.d/las3r")
 (add-to-list 'load-path "~/.emacs.d/magit")
 (add-to-list 'load-path "~/.emacs.d/sanityinc")
-(add-to-list 'load-path "~/.emacs.d/undo-tree")
 
 ;; ELPA
 (load "package")
@@ -93,12 +92,6 @@
 (add-hook 'clojure-mode-hook 'clojure-mode-setup)
 (defun clojure-mode-setup ()
   (highlight-parentheses-mode t))
-
-;; undo-tree
-(require 'undo-tree)
-(global-undo-tree-mode)
-(global-set-key (kbd "C-/") 'undo-tree-undo)
-(global-set-key (kbd "C-_") 'undo-tree-redo)
 
 ;; direct window movement
 (global-set-key (kbd "M-<right>") 'windmove-right)
