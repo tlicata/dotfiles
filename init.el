@@ -71,9 +71,6 @@
 ;; prevents warning at slime startup
 (eval-after-load 'slime '(setq slime-protocol-version 'ignore))
 
-;; desktop
-;(desktop-save-mode 1)
-
 ;; ;; parenthesis highlighting
 ;; (require 'highlight-parentheses)
 ;; (add-hook 'clojure-mode-hook 'clojure-mode-setup)
