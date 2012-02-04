@@ -78,13 +78,6 @@
 
 ;; desktop
 ;(desktop-save-mode 1)
-;; revive
-(autoload 'save-current-configuration "revive" "Save status" t)
-(autoload 'resume "revive" "Resume Emacs" t)
-(autoload 'wipe "revive" "Wipe Emacs" t)
-(global-set-key (kbd "C-x S") 'save-current-configuration)
-(global-set-key (kbd "C-x F") 'resume)
-(global-set-key (kbd "C-x K") 'wipe)
 
 ;; ;; parenthesis highlighting
 ;; (require 'highlight-parentheses)
