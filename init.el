@@ -32,8 +32,8 @@
 
 ;; ELPA
 (load "package")
-(package-initialize)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
 
 ;; open in current window
 (add-to-list 'same-window-buffer-names "*Buffer List*")
