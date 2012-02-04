@@ -19,7 +19,6 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/ac-slime")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
-(add-to-list 'load-path "~/.emacs.d/clojure")
 (add-to-list 'load-path "~/.emacs.d/coffee")
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/elpa")
@@ -87,11 +86,11 @@
 (global-set-key (kbd "C-x F") 'resume)
 (global-set-key (kbd "C-x K") 'wipe)
 
-;; parenthesis highlighting
-(require 'highlight-parentheses)
-(add-hook 'clojure-mode-hook 'clojure-mode-setup)
-(defun clojure-mode-setup ()
-  (highlight-parentheses-mode t))
+;; ;; parenthesis highlighting
+;; (require 'highlight-parentheses)
+;; (add-hook 'clojure-mode-hook 'clojure-mode-setup)
+;; (defun clojure-mode-setup ()
+;;   (highlight-parentheses-mode t))
 
 ;; direct window movement
 (global-set-key (kbd "M-<right>") 'windmove-right)
