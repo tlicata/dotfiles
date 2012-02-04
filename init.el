@@ -26,7 +26,6 @@
 (add-to-list 'load-path "~/.emacs.d/js")
 (add-to-list 'load-path "~/.emacs.d/las3r")
 (add-to-list 'load-path "~/.emacs.d/magit")
-(add-to-list 'load-path "~/.emacs.d/sanityinc")
 
 ;; ELPA
 (load "package")
@@ -47,10 +46,6 @@
   '(progn
      (color-theme-initialize)
      (color-theme-hober)))
-
-;; sanity inc color-theme
-(require 'color-theme-autoloads)
-(autoload 'color-theme-sanityinc-light "color-theme-sanityinc" "A light color theme" t)
 
 ;; org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
