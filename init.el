@@ -20,7 +20,6 @@
 (add-to-list 'load-path "~/.emacs.d/ac-slime")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/clojure")
-(add-to-list 'load-path "~/.emacs.d/clojure/durendal")
 (add-to-list 'load-path "~/.emacs.d/coffee")
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/elpa")
@@ -124,13 +123,18 @@
 (custom-set-variables
  '(magit-status-buffer-switch-function 'switch-to-buffer))
 
-(require 'durendal)
-(defun durendal-jack-in-with-coffee (&optional port-prompt)
-  "Does durendal-jack-in plus watches & autocompiles coffeescript changes."
-  (interactive "P")
-  (durendal-jack-in port-prompt)
-  (let ((root (locate-dominating-file default-directory "project.clj")))
-	(shell-command (format "cd %s && coffee -w -o ./war/js/bin -c ./src/tl/coffee &" root))))
+;; No longer need durendal with newer versions of
+;; Swank Clojure (M-x clojure-jack-in). I'm leaving
+;; this here for reference in case I want to wire
+;; up automatic coffeescript compilation again.
+
+;; (require 'durendal)
+;; (defun durendal-jack-in-with-coffee (&optional port-prompt)
+;;   "Does durendal-jack-in plus watches & autocompiles coffeescript changes."
+;;   (interactive "P")
+;;   (durendal-jack-in port-prompt)
+;;   (let ((root (locate-dominating-file default-directory "project.clj")))
+;; 	(shell-command (format "cd %s && coffee -w -o ./war/js/bin -c ./src/tl/coffee &" root))))
 
 ;; Actionscript
 (require 'ecmascript-mode)
