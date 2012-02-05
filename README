@@ -4,7 +4,7 @@ To use it:
 
 0) Install emacs.
 
-To get the emacs24 (not officially released yet), I did:
+To get the emacs24, I did:
 
 sudo add-apt-repository ppa:cassou/emacs
 sudo apt-get update
@@ -36,11 +36,12 @@ instance, M-f will open the File menu instead of moving forward a word.
 
 In terminal menu bar -> Edit -> Keyboard Shortcuts -> Uncheck "Enable menu access keys".
 
-Notes:
-
-* M-x query-replace RET C-q C-M RET RET (gets rid of "^M"s in code)
-
 7) EMMS relies on external media players.  On Ubuntu, installing mplayer allowed
 me to player mp3s.  Otherwise I got "Don't know how to play track" errors.
 
 sudo apt-get install mplayer
+
+
+Notes:
+
+* M-x query-replace RET C-q C-M RET RET (gets rid of "^M"s in code)
