@@ -121,6 +121,9 @@
 (add-to-list 'auto-mode-alist '("\\.as$" . ecmascript-mode))
 (add-to-list 'auto-mode-alist '("\\.lsr$" . las3r-mode))
 
+;; Clojurescript
+(add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
+
 ;; Javascript
 (require 'coffee-mode)
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
