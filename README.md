@@ -6,19 +6,19 @@ To use it:
 
 To get the emacs24, I did:
 
-sudo add-apt-repository ppa:cassou/emacs
-sudo apt-get update
-sudo apt-get install emacs-snapshot
+    sudo add-apt-repository ppa:cassou/emacs
+    sudo apt-get update
+    sudo apt-get install emacs-snapshot
 
 1) Clone this repository to ~/.emacs.d. If ~/.emacs.d already exists then back it up first.
 
-git clone <repo_url> ~/.emacs.d
+    git clone <repo_url> ~/.emacs.d
 
 2) The repo contains submodules that will be empty until they are inited and updated.
 
-cd ~/.emacs.d
-git submodule init
-git submodule update
+    cd ~/.emacs.d
+    git submodule init
+    git submodule update
 
 3) Start emacs
 
@@ -39,7 +39,7 @@ In terminal menu bar -> Edit -> Keyboard Shortcuts -> Uncheck "Enable menu acces
 7) EMMS relies on external media players.  On Ubuntu, installing mplayer allowed
 me to player mp3s.  Otherwise I got "Don't know how to play track" errors.
 
-sudo apt-get install mplayer
+    sudo apt-get install mplayer
 
 
 Notes:
