@@ -6,9 +6,21 @@ To use it:
 
 To get emacs24, I did:
 
+(on Ubuntu)
+
     sudo add-apt-repository ppa:cassou/emacs
     sudo apt-get update
     sudo apt-get install emacs-snapshot
+
+(on Mac OS X)
+
+Download a .dmg from http://emacsformacosx.com/builds
+Double click it
+Selection option to copy it to Applications folder
+In ~/.profile
+
+    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+
 
 1) Clone this repository to ~/.emacs.d. If ~/.emacs.d already exists then back it up first.
 
