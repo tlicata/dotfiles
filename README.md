@@ -4,7 +4,7 @@ To use it:
 
 0) Install emacs.
 
-To get the emacs24, I did:
+To get emacs24, I did:
 
     sudo add-apt-repository ppa:cassou/emacs
     sudo apt-get update
