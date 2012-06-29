@@ -1,6 +1,4 @@
-This is my emacs configuration tree.
-
-To use it:
+Help set up my dev environment. Mostly emacs.
 
 0) Install emacs.
 
@@ -22,37 +20,25 @@ In .bashrc (then source bashrc in .bash_profile)
     alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 
 
-1) Clone this repository to ~/.emacs.d. If ~/.emacs.d already exists then back it up first.
+1) Clone this repository to ~/dotfiles.
 
-    git clone <repo_url> ~/.emacs.d
+    git clone <repo_url> ~/dotfiles
 
-2) The repo contains submodules that will be empty until they are inited and updated.
+2) Run the script to set up symlinks.
 
-    cd ~/.emacs.d
-    git submodule init
-    git submodule update
-
-3) Start emacs
+    ~/dotfiles/create-symlinks.sh
 
 Optional:
 
-4) Undo-tree will be slow unless byte compiled.  M-x byte-compile-file <ENTER> undo-tree.el <ENTER>
-
-5) Make Caps Lock act as another Ctrl key.
+3) Make Caps Lock act as another Ctrl key.
 
 (On Ubuntu) -> System Menu -> Preferences -> Keyboard -> Layouts tab -> Options button ->
 Ctrl key position -> Make CapsLock an additional Ctrl.
 
-6) If terminal has a menu bar then Menu Access keys can interfere with emacs META commands.  For
+4) If terminal has a menu bar then Menu Access keys can interfere with emacs META commands.  For
 instance, M-f will open the File menu instead of moving forward a word.
 
 In terminal menu bar -> Edit -> Keyboard Shortcuts -> Uncheck "Enable menu access keys".
-
-7) EMMS relies on external media players.  On Ubuntu, installing mplayer allowed
-me to player mp3s.  Otherwise I got "Don't know how to play track" errors.
-
-    sudo apt-get install mplayer
-
 
 Notes:
 
