@@ -46,8 +46,8 @@ Notes:
 
 * Emacs24 was throwing errors of "variable is void: collection"
 
-- https://github.com/technomancy/emacs-starter-kit/issues/142
-- https://bugs.launchpad.net/emacs-snapshot/+bug/1003928
+https://github.com/technomancy/emacs-starter-kit/issues/142  
+https://bugs.launchpad.net/emacs-snapshot/+bug/1003928
 
 Workaround is
 
