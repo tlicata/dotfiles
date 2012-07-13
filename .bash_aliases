@@ -1,4 +1,9 @@
-if type emacs-snapshot > /dev/null 2>&1
+os=$(uname)
+
+if [[ $os == "Darwin" ]]
+then
+        alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+elif type emacs-snapshot > /dev/null 2>&1
 then
         alias emacs="emacs-snapshot -nw"
 else
