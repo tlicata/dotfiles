@@ -19,11 +19,11 @@ In .bashrc (then source bashrc in .bash_profile)
     alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 
 
-# Clone this repository to ~/dotfiles
+# Clone repository
 
     git clone <repo_url> ~/dotfiles
 
-# Run the script to set up symlinks
+# Set up symlinks
 
     ~/dotfiles/create-symlinks.sh
 
