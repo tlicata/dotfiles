@@ -1,6 +1,4 @@
-Help set up my dev environment. Mostly emacs.
-
-0) Install emacs.
+# Install emacs
 
 To get emacs24, I did:
 
@@ -12,35 +10,37 @@ To get emacs24, I did:
 
 (on Mac OS X)
 
-Download a .dmg from http://emacsformacosx.com/builds
-Double click it
-Select option to copy it to Applications folder
+* Download a .dmg from http://emacsformacosx.com/builds
+* Double click it
+* Select option to copy it to Applications folder
+
 In .bashrc (then source bashrc in .bash_profile)
 
     alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 
 
-1) Clone this repository to ~/dotfiles.
+# Clone this repository to ~/dotfiles
 
     git clone <repo_url> ~/dotfiles
 
-2) Run the script to set up symlinks.
+# Run the script to set up symlinks
 
     ~/dotfiles/create-symlinks.sh
 
-Optional:
+# Optional
 
-3) Make Caps Lock act as another Ctrl key.
+* Make Caps Lock act as another Ctrl key.
 
 (On Ubuntu) -> System Menu -> Preferences -> Keyboard -> Layouts tab -> Options button ->
 Ctrl key position -> Make CapsLock an additional Ctrl.
 
-4) If terminal has a menu bar then Menu Access keys can interfere with emacs META commands.  For
-instance, M-f will open the File menu instead of moving forward a word.
+* If terminal has a menu bar then Menu Access keys can interfere with
+  emacs META commands.  For instance, M-f will open the File menu
+  instead of moving forward a word.
 
 In terminal menu bar -> Edit -> Keyboard Shortcuts -> Uncheck "Enable menu access keys".
 
-Notes:
+## Notes
 
 * M-x query-replace RET C-q C-M RET RET (gets rid of "^M"s in code)
 
