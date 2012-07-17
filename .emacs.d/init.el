@@ -40,7 +40,7 @@
 (when (null package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit))
+(defvar my-packages '(starter-kit clojure-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
