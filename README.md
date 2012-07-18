@@ -14,11 +14,6 @@ To get emacs24, I did:
 * Double click it
 * Select option to copy it to Applications folder
 
-In .bashrc (then source bashrc in .bash_profile)
-
-    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
-
-
 # Clone repository
 
     git clone <repo_url> ~/dotfiles
