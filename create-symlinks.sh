@@ -4,46 +4,44 @@ readonly dotfiles=".bash_aliases .emacs.d .gitconfig .tmux.conf"
 readonly dotfilesdir="$(cd "$(dirname "$0")" && pwd)"
 readonly timestamp="$(date +%s)"
 
-removeSymlinks () {
+forEachFile () {
     for filename in $dotfiles
     do
-        existing=$HOME/$filename
-        if [ -h $existing ]
-        then
-            echo "removing symbolic link $existing"
-            rm $existing
-        fi
+        $1 $filename
     done
+}
+
+removeSymlink () {
+    existing=$HOME/$1
+    if [ -h $existing ]
+    then
+        echo "removing symbolic link $existing"
+        rm $existing
+    fi
 }
 
 backupExisting () {
-    for filename in $dotfiles
-    do
-        existing=$HOME/$filename
-        if [ -e $existing ]
-        then
-            backup=$existing.$timestamp
-            echo "backing up $existing to $backup"
-            mv $existing $backup
-        fi
-    done
+    existing=$HOME/$1
+    if [ -e $existing ]
+    then
+        backup=$existing.$timestamp
+        echo "backing up $existing to $backup"
+        mv $existing $backup
+    fi
 }
 
-createSymlinks () {
-    for filename in $dotfiles
-    do
-        existing=$HOME/$filename
-        current=$dotfilesdir/$filename
-        echo "symlinking $current to $existing"
-        ln -s $current $existing
-    done
+createSymlink () {
+    existing=$HOME/$1
+    current=$dotfilesdir/$1
+    echo "symlinking $current to $existing"
+    ln -s $current $existing
 }
 
 if [ "$1" == "-d" ]
 then
-    removeSymlinks
+    forEachFile removeSymlink
 else
-    removeSymlinks
-    backupExisting
-    createSymlinks
+    forEachFile removeSymlink
+    forEachFile backupExisting
+    forEachFile createSymlink
 fi
