@@ -1,8 +1,8 @@
 #!/bin/bash
 
-dotfiles=".bash_aliases .emacs.d .gitconfig .tmux.conf"
-dotfilesdir="$(cd "$(dirname "$0")" && pwd)"
-timestamp="$(date +%s)"
+readonly dotfiles=".bash_aliases .emacs.d .gitconfig .tmux.conf"
+readonly dotfilesdir="$(cd "$(dirname "$0")" && pwd)"
+readonly timestamp="$(date +%s)"
 
 for filename in $dotfiles
 do
