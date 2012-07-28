@@ -10,15 +10,15 @@ do
     current=$dotfilesdir/$filename
     if [ -e $existing ]
     then
-	if [ -h $existing ]
-	then
-	    echo "not backing up symbolic link $existing"
-	    rm $existing
-	else
-	    backup=$existing.$timestamp
-	    echo "backing up $existing to $backup"
-	    mv $existing $backup
-	fi
+        if [ -h $existing ]
+        then
+            echo "not backing up symbolic link $existing"
+            rm $existing
+        else
+            backup=$existing.$timestamp
+            echo "backing up $existing to $backup"
+            mv $existing $backup
+        fi
     fi
     echo "symlinking $current to $existing"
     ln -s $current $existing
