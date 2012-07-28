@@ -20,7 +20,7 @@ To get emacs24, I did:
 
 # Set up symlinks
 
-    ~/dotfiles/create-symlinks.sh
+    ~/dotfiles/symlinks.sh
 
 # Optional
 
