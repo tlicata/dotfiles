@@ -22,6 +22,10 @@ To get emacs24, I did:
 
     ~/dotfiles/symlinks.sh
 
+Passing the -d option will delete them.
+
+    ~/dotfiles/symlinks.sh -d
+
 # Optional
 
 * Make Caps Lock act as another Ctrl key.
