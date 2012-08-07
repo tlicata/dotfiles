@@ -12,7 +12,7 @@ forEachFile () {
 }
 
 removeSymlink () {
-    existing=$HOME/$1
+    local existing=$HOME/$1
     if [ -h $existing ]
     then
         echo "removing symbolic link $existing"
@@ -21,7 +21,7 @@ removeSymlink () {
 }
 
 backupExisting () {
-    existing=$HOME/$1
+    local existing=$HOME/$1
     if [ -e $existing ]
     then
         backup=$existing.$timestamp
@@ -31,8 +31,8 @@ backupExisting () {
 }
 
 createSymlink () {
-    existing=$HOME/$1
-    current=$dotfilesdir/$1
+    local existing=$HOME/$1
+    local current=$dotfilesdir/$1
     echo "symlinking $current to $existing"
     ln -s $current $existing
 }
