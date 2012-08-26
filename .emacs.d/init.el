@@ -40,7 +40,7 @@
 (when (null package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit clojure-mode markdown-mode))
+(defvar my-packages '(starter-kit clojure-mode markdown-mode nrepl))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
