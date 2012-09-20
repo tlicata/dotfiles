@@ -69,5 +69,6 @@
 ;; - sudo apt-get install npm
 ;; - sudo npm install -g jshint
 (require 'flymake-jshint)
+(setq jshint-configuration-path "~/.emacs.d/jshint.json")
 (add-hook 'javascript-mode-hook
      (lambda () (flymake-mode t)))

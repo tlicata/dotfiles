@@ -1,0 +1,21 @@
+{
+  "bitwise"      : true,
+  "browser"      : true,
+  "curly"        : true,
+  "eqeqeq"       : false,
+  "forin"        : true,
+  "immed"        : true,
+  "jquery"       : true,
+  "latedef"      : true,
+  "newcap"       : true,
+  "noarg"        : true,
+  "noempty"      : true,
+  "nonew"        : true,
+  "nomen"        : true,
+  "onevar"       : false,
+  "plusplus"     : false,
+  "regexp"       : true,
+  "strict"       : true,
+  "trailing"     : true,
+  "undef"        : true
+}
