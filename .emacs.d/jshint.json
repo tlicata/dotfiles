@@ -15,7 +15,7 @@
   "onevar"       : false,
   "plusplus"     : false,
   "regexp"       : true,
-  "strict"       : true,
+  "strict"       : false,
   "trailing"     : true,
   "undef"        : true
 }
