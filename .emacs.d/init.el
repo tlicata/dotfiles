@@ -40,7 +40,7 @@
 (when (null package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit clojure-mode flymake-jshint markdown-mode nrepl))
+(defvar my-packages '(starter-kit clojure-mode flymake-cursor flymake-jshint markdown-mode nrepl))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -64,10 +64,11 @@
 (defun magit-highlight-section () nil)
 
 ;; jshint
-;; - add flymake-jshint to my-packages
+;; - add flymake-cursor, flymake-jshint to my-packages
 ;; - sudo apt-get install nodejs
 ;; - sudo apt-get install npm
 ;; - sudo npm install -g jshint
+(require 'flymake-cursor)
 (require 'flymake-jshint)
 (setq jshint-configuration-path "~/.emacs.d/jshint.json")
 (add-hook 'javascript-mode-hook
