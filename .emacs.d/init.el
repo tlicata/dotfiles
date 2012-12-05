@@ -80,3 +80,6 @@
 (setq jshint-configuration-path "~/.emacs.d/jshint.json")
 (add-hook 'javascript-mode-hook
      (lambda () (flymake-mode t)))
+
+;; allows for M-x winner-undo to undo window changes
+(winner-mode t)
