@@ -83,3 +83,8 @@
 
 ;; allows for M-x winner-undo to undo window changes
 (winner-mode t)
+
+;; i miss modal editing sometimes. (kbd "C-c i") puts me
+;; into vi-mode. (kbd "i") puts me into insert mode, which
+;; is just the previous major mode.
+(global-set-key (kbd "C-c i") 'vi-mode)
