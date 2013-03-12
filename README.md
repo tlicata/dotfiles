@@ -41,8 +41,6 @@ In terminal menu bar -> Edit -> Keyboard Shortcuts -> Uncheck "Enable menu acces
 
 ## Notes
 
-* M-x query-replace RET C-q C-M RET RET (gets rid of "^M"s in code)
-
 * Emacs24 was throwing errors of "variable is void: collection"
 
 https://github.com/technomancy/emacs-starter-kit/issues/142  
