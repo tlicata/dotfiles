@@ -5,6 +5,9 @@
 (setq-default tab-width 4)
 (setq-default show-trailing-whitespace t)
 
+;; prevent backup files from being littered throughout the file system
+(setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
+
 ;; on startup, was getting this error:
 ;; "Symbol's value as variable is void: hippie-expand-try-functions-list"
 ;; chouser had same issue on irc:
