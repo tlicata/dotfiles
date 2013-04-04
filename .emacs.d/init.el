@@ -4,6 +4,7 @@
 
 (setq-default tab-width 4)
 (setq-default show-trailing-whitespace t)
+(setq-default truncate-lines t)
 
 ;; prevent backup files from being littered throughout the file system
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
