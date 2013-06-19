@@ -92,3 +92,12 @@
 ;; into vi-mode. (kbd "i") puts me into insert mode, which
 ;; is just the previous major mode.
 (global-set-key (kbd "C-c i") 'vi-mode)
+
+;; toggle comment current line if region is not active.
+;; based on http://www.emacswiki.org/emacs/CommentingCode
+(defun comment-dwim-line (&optional arg)
+  (interactive "*P")
+  (if (region-active-p)
+      (comment-dwim arg)
+    (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
+(global-set-key (kbd "M-;") 'comment-dwim-line)
