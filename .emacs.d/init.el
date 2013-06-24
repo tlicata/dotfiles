@@ -101,3 +101,6 @@
       (comment-dwim arg)
     (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
 (global-set-key (kbd "M-;") 'comment-dwim-line)
+
+;; replace kill-sentence with kill-whole-line
+(global-set-key (kbd "M-k") 'kill-whole-line)
