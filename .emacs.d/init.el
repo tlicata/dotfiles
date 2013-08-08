@@ -104,3 +104,6 @@
 
 ;; replace kill-sentence with kill-whole-line
 (global-set-key (kbd "M-k") 'kill-whole-line)
+
+;; enable narrow-to-region by default
+(put 'narrow-to-region 'disabled nil)
