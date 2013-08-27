@@ -2,11 +2,15 @@
 
 To get emacs24, I did:
 
-(on Ubuntu)
+(on Ubuntu 12.xx)
 
     sudo add-apt-repository ppa:cassou/emacs
     sudo apt-get update
     sudo apt-get install emacs-snapshot
+
+(on Ubuntu 13.xx)
+
+    sudo apt-get install emacs24
 
 (on Mac OS X)
 
