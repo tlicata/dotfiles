@@ -107,3 +107,7 @@
 
 ;; enable narrow-to-region by default
 (put 'narrow-to-region 'disabled nil)
+
+;; clojurescript
+(add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
+
