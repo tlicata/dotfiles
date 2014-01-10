@@ -32,11 +32,6 @@ Passing the -d option will delete them.
 
 # Optional
 
-* Make Caps Lock act as another Ctrl key.
-
-(On Ubuntu) -> System Menu -> Preferences -> Keyboard -> Layouts tab -> Options button ->
-Ctrl key position -> Make CapsLock an additional Ctrl.
-
 * If terminal has a menu bar then Menu Access keys can interfere with
   emacs META commands.  For instance, M-f will open the File menu
   instead of moving forward a word.
