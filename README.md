@@ -1,6 +1,6 @@
 # Install emacs
 
-To get emacs24, I did:
+To get emacs24:
 
 (on Ubuntu 12.xx)
 
