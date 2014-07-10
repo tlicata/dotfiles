@@ -63,7 +63,7 @@
 (setq auto-mode-alist
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
 (custom-set-variables
- '(markdown-command "markdown-2.7")
+ '(markdown-command "markdown_py-2.7")
  '(markdown-command-needs-filename t))
 
 ;; magit
