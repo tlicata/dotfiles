@@ -46,7 +46,7 @@
 ;; package
 (when (not (require 'package nil t))
   (require 'package "package-23.el"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
 (when (null package-archive-contents)
