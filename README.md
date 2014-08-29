@@ -14,9 +14,7 @@ To get emacs24:
 
 (on Mac OS X)
 
-* Download a .dmg from http://emacsformacosx.com/builds
-* Double click it
-* Select option to copy it to Applications folder
+    brew install emacs
 
 # Clone repository
 
