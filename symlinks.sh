@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly dotfiles=".bash_aliases .emacs.d .gitconfig .tmux.conf"
+readonly dotfiles=".bashrc .bash_aliases .bash_profile .emacs.d .gitconfig .tmux.conf"
 readonly dotfilesdir="$(cd "$(dirname "$0")" && pwd)"
 readonly timestamp="$(date +%s)"
 
