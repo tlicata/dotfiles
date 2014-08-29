@@ -52,7 +52,7 @@
 (when (null package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit clojure-mode flymake-cursor flymake-jshint markdown-mode nrepl))
+(defvar my-packages '(starter-kit cider clojure-mode flymake-cursor flymake-jshint markdown-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
