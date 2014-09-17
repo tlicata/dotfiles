@@ -52,7 +52,7 @@
 (when (null package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit cider clojure-mode coffee-mode flymake-cursor flymake-jshint markdown-mode))
+(defvar my-packages '(starter-kit cider clojure-mode coffee-mode flymake-cursor flymake-jshint markdown-mode yasnippet))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -111,4 +111,8 @@
 
 ;; clojurescript
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
+
+;; yasnippet
+(require 'yasnippet)
+(yas/global-mode 1)
 
