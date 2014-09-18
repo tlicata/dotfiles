@@ -116,3 +116,6 @@
 (require 'yasnippet)
 (yas/global-mode 1)
 
+;; enable change case within a region
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
