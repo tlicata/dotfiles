@@ -44,8 +44,7 @@
 (add-to-list 'load-path "~/.emacs.d")
 
 ;; package
-(when (not (require 'package nil t))
-  (require 'package "package-23.el"))
+(require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
