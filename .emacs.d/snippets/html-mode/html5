@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: HTML5 Page Skeleton
+# --
+<!doctype html>
+<html>
+  <head>
+    <title>$1</title>
+  </head>
+  <body>
+    $0
+  </body>
+</html>

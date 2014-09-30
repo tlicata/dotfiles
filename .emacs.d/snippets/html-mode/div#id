@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Div#id
+# group : meta
+# --
+<div id="$1">$0</div>
