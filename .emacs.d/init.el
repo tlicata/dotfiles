@@ -9,13 +9,6 @@
 ;; prevent backup files from being littered throughout the file system
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
 
-;; on startup, was getting this error:
-;; "Symbol's value as variable is void: hippie-expand-try-functions-list"
-;; chouser had same issue on irc:
-;; http://www.raynes.me/logs/irc.freenode.net/clojure/2012-10-05.txt
-;; apparently hippie-expand was renamed to hippie-exp?
-(require 'hippie-exp)
-
 ;; chromebook has no delete key, so make C-w
 ;; backward-kill-word if there is no region.
 (defun unix-werase-or-kill (arg)
