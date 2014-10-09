@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Describe
+# group : meta
+# --
+describe("$1", function () {
+$0
+});
