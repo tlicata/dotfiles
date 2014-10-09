@@ -114,3 +114,6 @@
 ;; enable change case within a region
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+;; don't highlight occurrences of word under cursor
+(remove-hook 'prog-mode-hook 'idle-highlight-mode)
