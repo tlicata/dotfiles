@@ -3,6 +3,7 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 
 (setq-default tab-width 4)
+(setq-default js-indent-level 2)
 (setq-default show-trailing-whitespace t)
 (setq-default truncate-lines t)
 
