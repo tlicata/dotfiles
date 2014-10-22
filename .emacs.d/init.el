@@ -31,6 +31,7 @@
 (setq eshell-prompt-function
       (lambda ()
         (concat (car (last (split-string (eshell/pwd) "/"))) " $ ")))
+(setq eshell-aliases-file "~/.emacs.d/eshell/alias")
 (eshell)
 
 ;; open in current window
