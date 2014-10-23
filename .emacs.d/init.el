@@ -109,6 +109,8 @@
 
 ;; clojurescript
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
+;; node/ejs
+(add-to-list 'auto-mode-alist '("\.ejs$" . html-mode))
 
 ;; yasnippet
 (require 'yasnippet)
