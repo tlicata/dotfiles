@@ -15,12 +15,12 @@
 (defun unix-werase-or-kill (arg)
       (interactive "*p")
       (if (and transient-mark-mode mark-active)
-		  (kill-region (region-beginning) (region-end))
-		(backward-kill-word arg)))
+          (kill-region (region-beginning) (region-end))
+        (backward-kill-word arg)))
 (global-set-key (kbd "C-w") 'unix-werase-or-kill)
 (add-hook 'ido-setup-hook
-		  (lambda ()
-			(define-key ido-file-completion-map "\C-w" 'ido-delete-backward-word-updir)))
+          (lambda ()
+            (define-key ido-file-completion-map "\C-w" 'ido-delete-backward-word-updir)))
 
 ;; shell
 (global-set-key (kbd "C-M-f") 'find-file-at-point)
