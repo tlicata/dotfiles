@@ -33,6 +33,11 @@
       (lambda ()
         (concat (car (last (split-string (eshell/pwd) "/"))) " $ ")))
 (setq eshell-aliases-file "~/.emacs.d/eshell/alias")
+(defun allow-trailing-whitespace ()
+  "Allow trailing whitespace in shell buffers."
+  (set-variable 'show-trailing-whitespace nil))
+(add-hook 'shell-mode-hook 'allow-trailing-whitespace)
+(add-hook 'eshell-mode-hook 'allow-trailing-whitespace)
 (eshell)
 
 ;; open in current window
