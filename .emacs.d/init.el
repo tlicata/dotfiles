@@ -59,6 +59,7 @@
                       cider
                       clojure-mode
                       coffee-mode
+                      color-theme-solarized
                       flymake-cursor
                       flymake-jshint
                       markdown-mode
@@ -134,3 +135,5 @@
 
 ;; don't highlight occurrences of word under cursor
 (remove-hook 'prog-mode-hook 'idle-highlight-mode)
+
+(load-theme 'solarized-light t)
