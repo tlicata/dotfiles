@@ -29,6 +29,7 @@
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 (setenv "NODE_NO_READLINE" "1")
 (setenv "PAGER" "cat")
+(setenv "PS1" "\\W \$ ")
 (setq eshell-prompt-function
       (lambda ()
         (concat (car (last (split-string (eshell/pwd) "/"))) " $ ")))
