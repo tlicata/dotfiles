@@ -24,7 +24,7 @@ backupExisting () {
     local existing=$HOME/$1
     if [ -e $existing ]
     then
-        backup=$existing.$timestamp
+        local backup=$existing.$timestamp
         echo "backing up $existing to $backup"
         mv $existing $backup
     fi
