@@ -39,6 +39,7 @@
   (set-variable 'show-trailing-whitespace nil))
 (add-hook 'shell-mode-hook 'allow-trailing-whitespace)
 (add-hook 'eshell-mode-hook 'allow-trailing-whitespace)
+(add-hook 'term-mode-hook 'allow-trailing-whitespace)
 (eshell)
 
 ;; open in current window
