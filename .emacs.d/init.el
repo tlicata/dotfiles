@@ -136,5 +136,7 @@
 
 ;; don't highlight occurrences of word under cursor
 (remove-hook 'prog-mode-hook 'idle-highlight-mode)
+;; don't highlight line cursor is on
+(remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)
 
 (load-theme 'solarized-light t)
