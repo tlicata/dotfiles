@@ -56,8 +56,7 @@
 (when (null package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit
-                      cider
+(defvar my-packages '(cider
                       clojure-mode
                       coffee-mode
                       color-theme-solarized
