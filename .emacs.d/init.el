@@ -64,11 +64,18 @@
                       flymake-cursor
                       flymake-jshint
                       markdown-mode
+                      smex
                       yasnippet))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; smex
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; markdown
 (autoload 'markdown-mode "markdown-mode"
