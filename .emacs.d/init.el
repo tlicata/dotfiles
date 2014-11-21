@@ -3,6 +3,7 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 
 (setq-default inhibit-splash-screen t)
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default js-indent-level 2)
 (setq-default show-trailing-whitespace t)
