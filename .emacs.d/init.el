@@ -63,6 +63,7 @@
                       color-theme-solarized
                       flymake-cursor
                       flymake-jshint
+                      ido-ubiquitous
                       markdown-mode
                       smex
                       yasnippet))
@@ -70,6 +71,10 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; ido
+(ido-mode t)
+(ido-ubiquitous-mode)
 
 ;; smex
 (smex-initialize)
