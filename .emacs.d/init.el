@@ -83,6 +83,9 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;; y or n instead of "yes" or "no" to prompts
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; markdown
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
