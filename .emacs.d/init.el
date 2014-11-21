@@ -2,6 +2,8 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 
+(setq-default inhibit-splash-screen t)
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default js-indent-level 2)
 (setq-default show-trailing-whitespace t)
@@ -56,19 +58,33 @@
 (when (null package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit
-                      cider
+(defvar my-packages '(cider
                       clojure-mode
                       coffee-mode
                       color-theme-solarized
                       flymake-cursor
                       flymake-jshint
+                      ido-ubiquitous
                       markdown-mode
+                      smex
                       yasnippet))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; ido
+(ido-mode t)
+(ido-ubiquitous-mode)
+
+;; smex
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; y or n instead of "yes" or "no" to prompts
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; markdown
 (autoload 'markdown-mode "markdown-mode"
@@ -133,10 +149,5 @@
 ;; enable change case within a region
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
-
-;; don't highlight occurrences of word under cursor
-(remove-hook 'prog-mode-hook 'idle-highlight-mode)
-;; don't highlight line cursor is on
-(remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)
 
 (load-theme 'solarized-light t)
