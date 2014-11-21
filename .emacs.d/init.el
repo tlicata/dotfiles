@@ -65,6 +65,7 @@
                       flymake-cursor
                       flymake-jshint
                       ido-ubiquitous
+                      magit
                       markdown-mode
                       smex
                       yasnippet))
