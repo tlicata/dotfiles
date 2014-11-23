@@ -77,6 +77,10 @@
 ;; ido
 (ido-mode t)
 (ido-ubiquitous-mode)
+(setq ido-enable-prefix nil
+      ido-enable-flex-matching t
+      ido-use-filename-at-point 'guess
+      ido-use-virtual-buffers t)
 
 ;; smex
 (smex-initialize)
