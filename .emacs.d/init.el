@@ -91,6 +91,9 @@
 ;; y or n instead of "yes" or "no" to prompts
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; highlight matching parens
+(show-paren-mode 1)
+
 ;; markdown
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
