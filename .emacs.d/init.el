@@ -48,7 +48,7 @@
 (custom-set-variables
  '(magit-status-buffer-switch-function (quote switch-to-buffer)))
 
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path ".")
 
 ;; package
 (require 'package)
