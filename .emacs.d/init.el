@@ -67,6 +67,7 @@
                       ido-ubiquitous
                       magit
                       markdown-mode
+                      projectile
                       smex
                       yasnippet))
 
@@ -87,6 +88,9 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; projectile
+(projectile-global-mode)
 
 ;; y or n instead of "yes" or "no" to prompts
 (defalias 'yes-or-no-p 'y-or-n-p)
