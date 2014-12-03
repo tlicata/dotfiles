@@ -70,7 +70,8 @@
                       projectile
                       smex
                       web-mode
-                      yasnippet))
+                      yasnippet
+                      zenburn))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -163,7 +164,8 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
-(load-theme 'solarized-light t)
+(load-theme 'zenburn t)
+
 (defun my-web-mode-hook ()
   "Hooks for Web mode."
   (setq web-mode-markup-indent-offset 2)
