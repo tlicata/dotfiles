@@ -71,7 +71,7 @@
                       smex
                       web-mode
                       yasnippet
-                      zenburn))
+                      zenburn-theme))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
