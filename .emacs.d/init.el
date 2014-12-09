@@ -174,3 +174,4 @@
   (setq web-mode-enable-auto-pairing t)
   (setq web-mode-enable-auto-closing t))
 (add-hook 'web-mode-hook  'my-web-mode-hook)
+(add-to-list 'auto-mode-alist '("\.html$" . web-mode))
