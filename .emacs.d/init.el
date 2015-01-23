@@ -114,8 +114,6 @@
 (require 'magit)
 (global-set-key (kbd "C-c l") 'magit-log)
 (global-set-key (kbd "C-c s") 'magit-status)
-(set-face-foreground 'magit-diff-add "green")
-(set-face-foreground 'magit-diff-del "red")
 (defun magit-highlight-section () nil)
 
 ;; jshint
