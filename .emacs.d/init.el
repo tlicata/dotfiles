@@ -33,6 +33,7 @@
 (setq eshell-prompt-function
       (lambda ()
         (concat (car (last (split-string (eshell/pwd) "/"))) " $ ")))
+(setq eshell-prompt-regexp "^[^#$\n]*[#$] ")
 (setq eshell-aliases-file "~/.emacs.d/eshell/alias")
 (setq comint-prompt-read-only t)
 (defun allow-trailing-whitespace ()
