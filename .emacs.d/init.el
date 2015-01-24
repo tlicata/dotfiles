@@ -109,6 +109,7 @@
 (custom-set-variables
  '(markdown-command "markdown_py-2.7")
  '(markdown-command-needs-filename t))
+(add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
 ;; magit
 (require 'magit)
