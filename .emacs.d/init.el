@@ -179,7 +179,7 @@
 (put 'downcase-region 'disabled nil)
 
 ;; color theme
-(load-theme 'zenburn t)
+(load-theme 'solarized-dark t)
 
 ;; web-mode
 (defun my-web-mode-hook ()
