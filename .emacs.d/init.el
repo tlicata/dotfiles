@@ -50,6 +50,7 @@
                       magit
                       markdown-mode
                       paredit
+                      nyan-mode
                       pbcopy
                       projectile
                       slim-mode
@@ -190,3 +191,6 @@
   (setq web-mode-enable-auto-closing t))
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 (add-to-list 'auto-mode-alist '("\.html$" . web-mode))
+
+;; nyan cat indicates position in buffer
+(nyan-mode t)
