@@ -12,22 +12,6 @@
 ;; prevent backup files from being littered throughout the file system
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
 
-;; C-w.
-;; Chromebook has no delete key so I can't M-DEL to kill the previous
-;; word. Bash uses C-w to cut up to the last space, so why not do
-;; that. Only problem: C-w kills the active region by default, so
-;; keep that functionality.
-(defun unix-werase-or-kill (arg)
-      (interactive "*p")
-      (if (and transient-mark-mode mark-active)
-          (kill-region (region-beginning) (region-end))
-        (backward-kill-word arg)))
-(global-set-key (kbd "C-w") 'unix-werase-or-kill)
-;; Use C-w in ido minibuffers too.
-(add-hook 'ido-setup-hook
-          (lambda ()
-            (define-key ido-file-completion-map "\C-w" 'ido-delete-backward-word-updir)))
-
 ;; shell
 (global-set-key (kbd "C-M-f") 'find-file-at-point)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
@@ -138,6 +122,22 @@
 ;; into vi-mode. (kbd "i") puts me into insert mode, which
 ;; is just the previous major mode.
 (global-set-key (kbd "C-c i") 'vi-mode)
+
+;; C-w.
+;; Chromebook has no delete key so I can't M-DEL to kill the previous
+;; word. Bash uses C-w to cut up to the last space, so why not do
+;; that. Only problem: C-w kills the active region by default, so
+;; keep that functionality.
+(defun unix-werase-or-kill (arg)
+  (interactive "*p")
+  (if (and transient-mark-mode mark-active)
+      (kill-region (region-beginning) (region-end))
+    (backward-kill-word arg)))
+(global-set-key (kbd "C-w") 'unix-werase-or-kill)
+;; Use C-w in ido minibuffers too.
+(add-hook 'ido-setup-hook
+          (lambda ()
+            (define-key ido-file-completion-map "\C-w" 'ido-delete-backward-word-updir)))
 
 ;; toggle comment current line if region is not active.
 ;; based on http://www.emacswiki.org/emacs/CommentingCode
