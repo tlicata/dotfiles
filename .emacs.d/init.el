@@ -12,14 +12,18 @@
 ;; prevent backup files from being littered throughout the file system
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
 
-;; chromebook has no delete key, so make C-w
-;; backward-kill-word if there is no region.
+;; C-w.
+;; Chromebook has no delete key so I can't M-DEL to kill the previous
+;; word. Bash uses C-w to cut up to the last space, so why not do
+;; that. Only problem: C-w kills the active region by default, so
+;; keep that functionality.
 (defun unix-werase-or-kill (arg)
       (interactive "*p")
       (if (and transient-mark-mode mark-active)
           (kill-region (region-beginning) (region-end))
         (backward-kill-word arg)))
 (global-set-key (kbd "C-w") 'unix-werase-or-kill)
+;; Use C-w in ido minibuffers too.
 (add-hook 'ido-setup-hook
           (lambda ()
             (define-key ido-file-completion-map "\C-w" 'ido-delete-backward-word-updir)))
