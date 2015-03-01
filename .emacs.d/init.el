@@ -4,7 +4,7 @@
 
 (setq-default inhibit-splash-screen t)
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
+(setq-default tab-width 2)
 (setq-default js-indent-level 2)
 (setq-default show-trailing-whitespace t)
 (setq-default truncate-lines t)
