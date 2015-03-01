@@ -26,7 +26,6 @@
 
 ;; shell
 (global-set-key (kbd "C-M-f") 'find-file-at-point)
-(global-set-key (kbd "<f12>") 'comint-get-next-from-history)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 (setenv "NODE_NO_READLINE" "1")
 (setenv "PAGER" "cat")
