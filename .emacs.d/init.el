@@ -163,6 +163,11 @@
 (require 'yasnippet)
 (yas/global-mode 1)
 
+;; dired-x
+(autoload 'dired-jump "dired-x"
+  "Jump to Dired buffer corresponding to current buffer." t)
+(global-set-key (kbd "C-x C-j") 'dired-jump)
+
 ;; enable change case within a region
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
