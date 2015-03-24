@@ -55,6 +55,7 @@
                       ido-ubiquitous
                       magit
                       markdown-mode
+                      pbcopy
                       projectile
                       smex
                       web-mode
@@ -162,6 +163,10 @@
 ;; yasnippet
 (require 'yasnippet)
 (yas/global-mode 1)
+
+;; pbcopy - integrate with OS copy / paste
+(require 'pbcopy)
+(turn-on-pbcopy)
 
 ;; dired-x
 (autoload 'dired-jump "dired-x"
