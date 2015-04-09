@@ -51,7 +51,6 @@
                       markdown-mode
                       paredit
                       nyan-mode
-                      pbcopy
                       projectile
                       slim-mode
                       smex
@@ -164,10 +163,6 @@
 ;; yasnippet
 (require 'yasnippet)
 (yas/global-mode 1)
-
-;; pbcopy - integrate with OS copy / paste
-(require 'pbcopy)
-(turn-on-pbcopy)
 
 ;; dired-x
 (autoload 'dired-jump "dired-x"
