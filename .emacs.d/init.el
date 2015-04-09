@@ -13,7 +13,6 @@
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
 
 ;; shell
-(global-set-key (kbd "C-M-f") 'find-file-at-point)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 (setenv "NODE_NO_READLINE" "1")
 (setenv "PAGER" "cat")
