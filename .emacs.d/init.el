@@ -103,6 +103,7 @@
 (require 'magit)
 (global-set-key (kbd "C-c l") 'magit-log)
 (global-set-key (kbd "C-c s") 'magit-status)
+(setq magit-last-seen-setup-instructions "1.4.0")
 (defun magit-highlight-section () nil)
 
 ;; paredit mode for clojure
