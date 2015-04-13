@@ -54,6 +54,7 @@
                       ido-ubiquitous
                       magit
                       markdown-mode
+                      paredit
                       pbcopy
                       projectile
                       smex
@@ -103,6 +104,9 @@
 (global-set-key (kbd "C-c l") 'magit-log)
 (global-set-key (kbd "C-c s") 'magit-status)
 (defun magit-highlight-section () nil)
+
+;; paredit mode for clojure
+(add-hook 'clojure-mode-hook #'paredit-mode)
 
 ;; jshint
 ;; - add flymake-cursor, flymake-jshint to my-packages
