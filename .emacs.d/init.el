@@ -106,8 +106,9 @@
 (setq magit-last-seen-setup-instructions "1.4.0")
 (defun magit-highlight-section () nil)
 
-;; paredit mode for clojure
+;; clojure
 (add-hook 'clojure-mode-hook #'paredit-mode)
+(setq cider-repl-history-file "~/.emacs.d/cider-history")
 
 ;; jshint
 ;; - add flymake-cursor, flymake-jshint to my-packages
