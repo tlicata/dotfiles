@@ -3,5 +3,3 @@ alias la="ls -a"
 alias l="ls"
 alias lla="ls -a -l"
 alias lh="ls -l -h"
-
-alias sqlize="./node_modules/.bin/sequelize"
