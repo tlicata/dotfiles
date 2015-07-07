@@ -1,9 +1,9 @@
 [user]
-	name = Tim Licata
-	email = tim@timothylicata.com
+  name = Tim Licata
+  email = tim@timothylicata.com
 [core]
-	editor = emacs -nw
-	autocrlf = input
+  editor = emacs -nw
+  autocrlf = input
 
 [color]
   branch = auto
