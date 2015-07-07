@@ -58,6 +58,7 @@
                       paredit
                       pbcopy
                       projectile
+                      slim-mode
                       smex
                       web-mode
                       yasnippet
