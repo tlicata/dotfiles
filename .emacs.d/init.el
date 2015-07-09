@@ -50,6 +50,7 @@
                       clojure-mode
                       coffee-mode
                       color-theme-solarized
+                      exec-path-from-shell
                       flymake-cursor
                       flymake-jshint
                       ido-ubiquitous
@@ -67,6 +68,10 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; Copy $PATH from shell for windowed Emacs
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 ;; ido
 (ido-mode t)
@@ -106,7 +111,6 @@
 (global-set-key (kbd "C-c l") 'magit-log)
 (global-set-key (kbd "C-c s") 'magit-status)
 (setq magit-last-seen-setup-instructions "1.4.0")
-(setq magit-emacsclient-executable "/usr/local/bin/emacsclient")
 (defun magit-highlight-section () nil)
 
 ;; clojure
