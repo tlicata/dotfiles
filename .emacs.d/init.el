@@ -130,10 +130,13 @@
 ;; allows for M-x winner-undo to undo window changes
 (winner-mode t)
 
-;; i miss modal editing sometimes. (kbd "C-c i") puts me
-;; into vi-mode. (kbd "i") puts me into insert mode, which
-;; is just the previous major mode.
-(global-set-key (kbd "C-c i") 'vi-mode)
+;; i miss modal editing sometimes. (kbd "C-c i") puts me into
+;; viper-mode. (kbd "C-z") puts me back into emacs mode.
+;; M-x viper-go-away disables it entirely.
+(global-set-key (kbd "C-c i") 'viper-mode)
+(setq viper-expert-level  '3)
+(setq viper-inhibit-startup-message 't)
+(setq viper-always nil)
 
 ;; C-w.
 ;; Chromebook has no delete key so I can't M-DEL to kill the previous
