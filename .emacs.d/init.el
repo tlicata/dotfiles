@@ -101,7 +101,7 @@
 (setq auto-mode-alist
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
 (custom-set-variables
- '(markdown-command "markdown_py-2.7")
+ '(markdown-command "markdown")
  '(markdown-command-needs-filename t))
 (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
