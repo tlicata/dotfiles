@@ -49,6 +49,7 @@
                       clojure-mode
                       coffee-mode
                       color-theme-solarized
+                      elixir-mode
                       exec-path-from-shell
                       flymake-cursor
                       flymake-jshint
