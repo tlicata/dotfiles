@@ -46,8 +46,6 @@
                       color-theme-solarized
                       elixir-mode
                       exec-path-from-shell
-                      flymake-cursor
-                      flymake-jshint
                       ido-ubiquitous
                       magit
                       markdown-mode
@@ -114,17 +112,6 @@
 ;; clojure
 (add-hook 'clojure-mode-hook #'paredit-mode)
 (setq cider-repl-history-file "~/.emacs.d/cider-history")
-
-;; jshint
-;; - add flymake-cursor, flymake-jshint to my-packages
-;; - sudo apt-get install nodejs
-;; - sudo apt-get install npm
-;; - sudo npm install -g jshint
-(require 'flymake-cursor)
-(require 'flymake-jshint)
-(setq jshint-configuration-path "~/.emacs.d/jshint.json")
-(add-hook 'javascript-mode-hook
-     (lambda () (flymake-mode t)))
 
 ;; allows for M-x winner-undo to undo window changes
 (winner-mode t)
