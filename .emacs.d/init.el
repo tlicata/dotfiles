@@ -107,7 +107,6 @@
 (global-set-key (kbd "C-c s") 'magit-status)
 (setq magit-last-seen-setup-instructions "1.4.0")
 (setq magit-log-show-margin nil)
-(defun magit-highlight-section () nil)
 (defun magit-log-mode-config ()
   (local-set-key (kbd "h") 'magit-toggle-margin))
 (add-hook 'magit-log-mode-hook 'magit-log-mode-config)
