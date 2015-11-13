@@ -30,11 +30,6 @@
 (add-hook 'term-mode-hook 'allow-trailing-whitespace)
 (eshell)
 
-;; open in current window
-(add-to-list 'same-window-buffer-names "*Buffer List*")
-(custom-set-variables
- '(magit-status-buffer-switch-function (quote switch-to-buffer)))
-
 (add-to-list 'load-path ".")
 
 ;; package
