@@ -109,6 +109,11 @@
   (local-set-key (kbd "h") 'magit-toggle-margin))
 (add-hook 'magit-log-mode-hook 'magit-log-mode-config)
 
+;; org-mode
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ruby . t)))
+
 ;; clojure
 (add-hook 'clojure-mode-hook #'paredit-mode)
 (setq cider-repl-history-file "~/.emacs.d/cider-history")
