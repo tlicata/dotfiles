@@ -52,6 +52,7 @@
                       paredit
                       pbcopy
                       projectile
+                      projectile-rails
                       slim-mode
                       smex
                       web-mode
@@ -117,6 +118,9 @@
 ;; clojure
 (add-hook 'clojure-mode-hook #'paredit-mode)
 (setq cider-repl-history-file "~/.emacs.d/cider-history")
+
+;; ruby
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 ;; allows for M-x winner-undo to undo window changes
 (winner-mode t)
