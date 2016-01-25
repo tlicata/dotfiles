@@ -121,6 +121,7 @@
 
 ;; ruby
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
+(setq ruby-deep-indent-paren nil)
 
 ;; allows for M-x winner-undo to undo window changes
 (winner-mode t)
