@@ -200,3 +200,6 @@
   (setq web-mode-enable-auto-closing t))
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 (add-to-list 'auto-mode-alist '("\.html$" . web-mode))
+;; JSX syntax highlighting on .js files in web-mode.
+(setq web-mode-content-types-alist
+      '(("jsx" . "\.js[x]?$")))
