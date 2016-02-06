@@ -53,6 +53,7 @@
                       pbcopy
                       projectile
                       projectile-rails
+                      scss-mode
                       slim-mode
                       smex
                       web-mode
@@ -203,3 +204,6 @@
 ;; JSX syntax highlighting on .js files in web-mode.
 (setq web-mode-content-types-alist
       '(("jsx" . "\.js[x]?$")))
+
+;; scss mode
+(setq scss-compile-at-save nil)
