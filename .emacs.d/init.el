@@ -142,7 +142,7 @@
 ;; keep that functionality.
 (defun unix-werase-or-kill (arg)
   (interactive "*p")
-  (if (and transient-mark-mode mark-active)
+  (if (use-region-p)
       (kill-region (region-beginning) (region-end))
     (backward-kill-word arg)))
 (global-set-key (kbd "C-w") 'unix-werase-or-kill)
