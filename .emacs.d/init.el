@@ -144,7 +144,9 @@
   (interactive "*p")
   (if (use-region-p)
       (kill-region (region-beginning) (region-end))
-    (backward-kill-word arg)))
+    (if (eq (key-binding (kbd "M-DEL")) 'paredit-backward-kill-word)
+        (paredit-backward-kill-word)
+      (backward-kill-word arg))))
 (global-set-key (kbd "C-w") 'unix-werase-or-kill)
 ;; Use C-w in ido minibuffers too.
 (add-hook 'ido-setup-hook
