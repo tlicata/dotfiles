@@ -103,7 +103,12 @@
 
 ;; magit
 (require 'magit)
-(global-set-key (kbd "C-c l") 'magit-log-buffer-file)
+(defun magit-log-file-or-repo ()
+  (interactive)
+  (if (magit-file-relative-name)
+      (magit-log-buffer-file)
+    (magit-log-all magit-log-arguments)))
+(global-set-key (kbd "C-c l") 'magit-log-file-or-repo)
 (global-set-key (kbd "C-c s") 'magit-status)
 (setq magit-last-seen-setup-instructions "1.4.0")
 (setq magit-log-show-margin nil)
