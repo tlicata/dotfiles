@@ -111,10 +111,15 @@
 (global-set-key (kbd "C-c l") 'magit-log-file-or-repo)
 (global-set-key (kbd "C-c s") 'magit-status)
 (setq magit-last-seen-setup-instructions "1.4.0")
+;; hide right margin in log buffer, but toggle with "h".
 (setq magit-log-show-margin nil)
 (defun magit-log-mode-config ()
   (local-set-key (kbd "h") 'magit-toggle-margin))
 (add-hook 'magit-log-mode-hook 'magit-log-mode-config)
+;; fullscreen magit-status buffer
+(defadvice magit-status (around magit-fullscreen activate)
+  ad-do-it
+  (delete-other-windows))
 
 ;; org-mode
 (org-babel-do-load-languages
