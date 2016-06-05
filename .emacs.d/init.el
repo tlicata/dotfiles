@@ -220,3 +220,6 @@
 ;; scss mode
 (setq scss-compile-at-save nil)
 (setq css-indent-offset 2)
+
+;; font sizes for windowed emacs
+(set-face-attribute 'default nil :height 140)
