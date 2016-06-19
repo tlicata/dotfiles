@@ -47,6 +47,7 @@
                       elixir-mode
                       exec-path-from-shell
                       ido-ubiquitous
+                      lfe-mode
                       magit
                       markdown-mode
                       paredit
@@ -182,6 +183,8 @@
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
 ;; node/ejs
 (add-to-list 'auto-mode-alist '("\.ejs$" . html-mode))
+;; lfe
+(add-to-list 'auto-mode-alist '("\.lfe$" . lfe-mode))
 
 ;; yasnippet
 (require 'yasnippet)
