@@ -46,6 +46,7 @@
                       color-theme-solarized
                       elixir-mode
                       exec-path-from-shell
+                      haml-mode
                       ido-ubiquitous
                       lfe-mode
                       magit
