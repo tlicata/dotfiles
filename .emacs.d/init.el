@@ -9,6 +9,7 @@
 (setq-default show-trailing-whitespace t)
 (setq-default truncate-lines t)
 (setq-default ring-bell-function 'ignore)
+(setq-default fill-column 80)
 
 ;; prevent backup files from being littered throughout the file system
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
