@@ -134,7 +134,10 @@
 
 ;; ruby
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
+(setq ruby-use-smie nil)
 (setq ruby-deep-indent-paren nil)
+(setq ruby-deep-indent-paren-style nil)
+(setq ruby-deep-arglist nil)
 
 ;; allows for M-x winner-undo to undo window changes
 (winner-mode t)
