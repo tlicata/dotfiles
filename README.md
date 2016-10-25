@@ -1,12 +1,6 @@
-# Install emacs
+# Install Emacs
 
-(on Ubuntu 13.xx)
-
-    sudo apt-get install emacs24
-
-(on Mac OS X)
-
-    brew install emacs
+   Homebrew? Apt-get? From source? However you can.
 
 # Clone repository
 
