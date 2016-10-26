@@ -231,3 +231,9 @@
 
 ;; font sizes for windowed emacs
 (set-face-attribute 'default nil :height 140)
+
+;; find the non-ascii character
+(defun occur-non-ascii ()
+  "Show non-ascii characters of current buffer in an Occur buffer"
+  (interactive)
+  (occur "[[:nonascii:]]"))
