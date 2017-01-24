@@ -44,7 +44,6 @@
 (defvar my-packages '(cider
                       clojure-mode
                       coffee-mode
-                      color-theme-solarized
                       elixir-mode
                       exec-path-from-shell
                       haml-mode
@@ -56,6 +55,7 @@
                       pbcopy
                       projectile
                       projectile-rails
+                      solarized-theme
                       scss-mode
                       slim-mode
                       smex
