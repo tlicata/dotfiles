@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: app.get
-# group : meta
-# --
-app.get("/$1", function (req, res) {
-$0
-});

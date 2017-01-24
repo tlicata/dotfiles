@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: Div.class
-# group : meta
-# --
-<div class="$1">$0</div>

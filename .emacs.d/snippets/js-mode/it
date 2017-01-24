@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: It
-# group : meta
-# --
-it("$1", function () {
-$0
-});

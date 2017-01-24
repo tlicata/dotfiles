@@ -60,7 +60,6 @@
                       slim-mode
                       smex
                       web-mode
-                      yasnippet
                       zenburn-theme))
 
 (dolist (p my-packages)
@@ -190,10 +189,6 @@
 (add-to-list 'auto-mode-alist '("\.ejs$" . html-mode))
 ;; lfe
 (add-to-list 'auto-mode-alist '("\.lfe$" . lfe-mode))
-
-;; yasnippet
-(require 'yasnippet)
-(yas/global-mode 1)
 
 ;; pbcopy - integrate with OS copy / paste
 (require 'pbcopy)
