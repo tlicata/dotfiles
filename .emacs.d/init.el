@@ -122,6 +122,7 @@
 ;; same window magit-status buffer
 ;; https://magit.vc/manual/magit/Switching-Buffers.html#Switching-Buffers
 (setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
+(setq magit-refresh-verbose t)
 
 ;; org-mode
 (org-babel-do-load-languages
