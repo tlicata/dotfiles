@@ -119,10 +119,9 @@
 (defun magit-log-mode-config ()
   (local-set-key (kbd "h") 'magit-toggle-margin))
 (add-hook 'magit-log-mode-hook 'magit-log-mode-config)
-;; fullscreen magit-status buffer
-(defadvice magit-status (around magit-fullscreen activate)
-  ad-do-it
-  (delete-other-windows))
+;; same window magit-status buffer
+;; https://magit.vc/manual/magit/Switching-Buffers.html#Switching-Buffers
+(setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
 
 ;; org-mode
 (org-babel-do-load-languages
