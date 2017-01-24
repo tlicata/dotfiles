@@ -1,6 +1,6 @@
 # Install Emacs
 
-   Homebrew? Apt-get? From source? However you can.
+   Homebrew? Apt-get? From source?
 
 # Clone repository
 
