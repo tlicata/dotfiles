@@ -51,6 +51,7 @@
                       lfe-mode
                       magit
                       markdown-mode
+                      multiple-cursors
                       paredit
                       pbcopy
                       projectile
@@ -203,6 +204,15 @@
 ;; enable change case within a region
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+;; multiple cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "C-x C-m") 'mc/edit-lines)
+(global-set-key (kbd "M-3") 'mc/mark-next-like-this)
+(global-set-key (kbd "M-4") 'mc/mark-previous-like-this)
+(global-set-key (kbd "M-#") 'mc/unmark-next-like-this)
+(global-set-key (kbd "M-$") 'mc/unmark-previous-like-this)
+;; http://endlessparentheses.com/multiple-cursors-keybinds.html
 
 ;; color theme
 (load-theme 'zenburn t)
