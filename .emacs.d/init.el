@@ -41,7 +41,8 @@
 (when (null package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(cider
+(defvar my-packages '(ag
+                      cider
                       clojure-mode
                       coffee-mode
                       elixir-mode
