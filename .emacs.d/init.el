@@ -200,6 +200,8 @@
 ;; dired-x
 (autoload 'dired-jump "dired-x"
   "Jump to Dired buffer corresponding to current buffer." t)
+(autoload 'dired-do-find-marked-files "dired-x"
+  "Find all marked files displaying all of them simultaneously." t)
 (global-set-key (kbd "C-x C-j") 'dired-jump)
 
 ;; enable change case within a region
