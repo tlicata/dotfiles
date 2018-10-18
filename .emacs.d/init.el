@@ -29,6 +29,7 @@
 (add-hook 'shell-mode-hook 'allow-trailing-whitespace)
 (add-hook 'eshell-mode-hook 'allow-trailing-whitespace)
 (add-hook 'term-mode-hook 'allow-trailing-whitespace)
+(add-hook 'Buffer-menu-mode-hook 'allow-trailing-whitespace)
 (eshell)
 
 (add-to-list 'load-path ".")
