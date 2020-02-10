@@ -6,6 +6,8 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq-default js-indent-level 2)
+(setq-default groovy-indent-offset 2)
+(setq-default typescript-indent-level 2)
 (setq-default show-trailing-whitespace t)
 (setq-default truncate-lines t)
 (setq-default ring-bell-function 'ignore)
