@@ -39,7 +39,8 @@
 ;; package
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(unless package--initialized (package-initialize t))
+;; (unless package--initialized (package-initialize t))
+(package-initialize)
 
 (when (null package-archive-contents)
   (package-refresh-contents))
