@@ -274,3 +274,6 @@
   "Show non-ascii characters of current buffer in an Occur buffer"
   (interactive)
   (occur "[[:nonascii:]]"))
+
+;; but, why?
+(require 'subr-x)
