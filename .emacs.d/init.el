@@ -87,7 +87,8 @@
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-use-filename-at-point 'guess
-      ido-use-virtual-buffers t)
+      ido-use-virtual-buffers t
+      ffap-machine-p-known 'reject) ;; stop pinging Indonesia
 
 ;; smex
 ;; (smex-initialize)
