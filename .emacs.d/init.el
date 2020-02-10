@@ -216,6 +216,7 @@
 ;; pbcopy - integrate with OS copy / paste
 (require 'pbcopy)
 (turn-on-pbcopy)
+(global-set-key (kbd "C-S-v") 'clipboard-yank)
 
 ;; dired-x
 (autoload 'dired-jump "dired-x"
