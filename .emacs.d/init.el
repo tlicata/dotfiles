@@ -97,7 +97,9 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; projectile
-(projectile-global-mode)
+;; (projectile-global-mode)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; y or n instead of "yes" or "no" to prompts
 (defalias 'yes-or-no-p 'y-or-n-p)
