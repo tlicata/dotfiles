@@ -53,8 +53,9 @@
                       elixir-mode
                       exec-path-from-shell
                       haml-mode
-                      ido-ubiquitous
                       lfe-mode
+                      ;; ido-ubiquitous
+                      ido-completing-read+
                       magit
                       markdown-mode
                       multiple-cursors
@@ -80,14 +81,15 @@
 
 ;; ido
 (ido-mode t)
-(ido-ubiquitous-mode)
+(ido-everywhere t)
+;; (ido-ubiquitous-mode t)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-use-filename-at-point 'guess
       ido-use-virtual-buffers t)
 
 ;; smex
-(smex-initialize)
+;; (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
