@@ -48,6 +48,8 @@
                       cider
                       clojure-mode
                       coffee-mode
+                      company
+                      csharp-mode
                       elixir-mode
                       exec-path-from-shell
                       haml-mode
@@ -58,6 +60,7 @@
                       multiple-cursors
                       paredit
                       pbcopy
+                      omnisharp
                       projectile
                       projectile-rails
                       solarized-theme
@@ -133,6 +136,14 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((ruby . t)))
+
+;; csharp
+(add-hook 'csharp-mode-hook 'omnisharp-mode)
+(add-hook 'csharp-mode-hook #'company-mode)
+(eval-after-load
+ 'company
+ '(add-to-list 'company-backends 'company-omnisharp))
+;; (define-key omnisharp-mode-map (kbd "M-.") 'omnisharp-go-to-definition)
 
 ;; clojure
 (add-hook 'clojure-mode-hook #'paredit-mode)
