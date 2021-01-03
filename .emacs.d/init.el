@@ -50,6 +50,7 @@
                       exec-path-from-shell
                       haml-mode
                       ido-ubiquitous
+                      ledger-mode
                       lfe-mode
                       magit
                       markdown-mode
@@ -142,6 +143,11 @@
 (setq ruby-deep-indent-paren nil)
 (setq ruby-deep-indent-paren-style nil)
 (setq ruby-deep-arglist nil)
+
+;; ledger
+;; (require 'ledger-mode)
+(setq ledger-binary-path "/home/tim/Code/ledger/ledger")
+(add-to-list 'auto-mode-alist '("\.ledger$" . ledger-mode))
 
 ;; allows for M-x winner-undo to undo window changes
 (winner-mode t)
