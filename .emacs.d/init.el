@@ -47,6 +47,7 @@
                       clojure-mode
                       coffee-mode
                       elixir-mode
+                      erlang
                       exec-path-from-shell
                       haml-mode
                       ido-ubiquitous
