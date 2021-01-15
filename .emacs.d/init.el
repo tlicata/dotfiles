@@ -130,6 +130,7 @@
 
 ;; org-mode
 (setq org-table-copy-increment nil)
+(global-set-key (kbd "C-c a") 'org-agenda)
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((ruby . t)))
