@@ -6,6 +6,8 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq-default js-indent-level 2)
+(setq-default groovy-indent-offset 2)
+(setq-default typescript-indent-level 2)
 (setq-default show-trailing-whitespace t)
 (setq-default truncate-lines t)
 (setq-default ring-bell-function 'ignore)
@@ -37,29 +39,35 @@
 ;; package
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(unless package--initialized (package-initialize t))
+;; (unless package--initialized (package-initialize t))
+(package-initialize)
 
 (when (null package-archive-contents)
   (package-refresh-contents))
 
 (defvar my-packages '(ag
-                      cider
-                      clojure-mode
-                      coffee-mode
+                      ;; cider
+                      ;; clojure-mode
+                      ;; coffee-mode
+                      company
+                      csharp-mode
                       elixir-mode
                       erlang
-                      exec-path-from-shell
-                      haml-mode
-                      ido-ubiquitous
+                      ;; exec-path-from-shell
+                      ;; fsharp-mode
+                      ;; haml-mode
+                      ;; ido-ubiquitous
+                      ido-completing-read+
                       ledger-mode
-                      lfe-mode
+                      ;; lfe-mode
                       magit
                       markdown-mode
                       multiple-cursors
-                      paredit
-                      pbcopy
+                      omnisharp
+                      ;; paredit
+                      ;; pbcopy
                       projectile
-                      projectile-rails
+                      ;; projectile-rails
                       solarized-theme
                       scss-mode
                       slim-mode
@@ -72,25 +80,31 @@
     (package-install p)))
 
 ;; Copy $PATH from shell for windowed Emacs
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+;; (when (memq window-system '(mac ns))
+;;   (exec-path-from-shell-initialize))
 
 ;; ido
 (ido-mode t)
-(ido-ubiquitous-mode)
+(ido-everywhere t)
+;; (ido-ubiquitous-mode t)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-use-filename-at-point 'guess
-      ido-use-virtual-buffers t)
+      ido-use-virtual-buffers t
+      ffap-machine-p-known 'reject) ;; stop pinging Indonesia
 
 ;; smex
-(smex-initialize)
+;; (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; projectile
-(projectile-global-mode)
+;; (projectile-global-mode)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;; (setq ag-executable "c:/Users/Tim.Licata/Downloads/ag-2018-11-27_2.2.0-4-g1b06a9f-x64/ag.exe")
+;; (setq projectile-indexing-method 'native)
 
 ;; y or n instead of "yes" or "no" to prompts
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -135,16 +149,27 @@
  'org-babel-load-languages
  '((ruby . t)))
 
+;; csharp
+(add-hook 'csharp-mode-hook 'omnisharp-mode)
+(add-hook 'csharp-mode-hook #'company-mode)
+(eval-after-load
+ 'company
+ '(add-to-list 'company-backends 'company-omnisharp))
+;; (define-key omnisharp-mode-map (kbd "M-.") 'omnisharp-go-to-definition)
+
 ;; clojure
-(add-hook 'clojure-mode-hook #'paredit-mode)
-(setq cider-repl-history-file "~/.emacs.d/cider-history")
+;; (add-hook 'clojure-mode-hook #'paredit-mode)
+;; (setq cider-repl-history-file "~/.emacs.d/cider-history")
 
 ;; ruby
-(add-hook 'projectile-mode-hook 'projectile-rails-on)
-(setq ruby-use-smie nil)
-(setq ruby-deep-indent-paren nil)
-(setq ruby-deep-indent-paren-style nil)
-(setq ruby-deep-arglist nil)
+;; (add-hook 'projectile-mode-hook 'projectile-rails-on)
+;; (setq ruby-use-smie nil)
+;; (setq ruby-deep-indent-paren nil)
+;; (setq ruby-deep-indent-paren-style nil)
+;; (setq ruby-deep-arglist nil)
+
+;; docker
+;; (require 'docker-compose-mode)
 
 ;; ledger
 ;; (require 'ledger-mode)
@@ -196,15 +221,16 @@
 (put 'narrow-to-region 'disabled nil)
 
 ;; clojurescript
-(add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
+;; (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
 ;; node/ejs
 (add-to-list 'auto-mode-alist '("\.ejs$" . html-mode))
 ;; lfe
-(add-to-list 'auto-mode-alist '("\.lfe$" . lfe-mode))
+;; (add-to-list 'auto-mode-alist '("\.lfe$" . lfe-mode))
 
 ;; pbcopy - integrate with OS copy / paste
-(require 'pbcopy)
-(turn-on-pbcopy)
+;; (require 'pbcopy)
+;; (turn-on-pbcopy)
+(global-set-key (kbd "C-S-v") 'clipboard-yank)
 
 ;; dired-x
 (autoload 'dired-jump "dired-x"
@@ -255,3 +281,6 @@
   "Show non-ascii characters of current buffer in an Occur buffer"
   (interactive)
   (occur "[[:nonascii:]]"))
+
+;; but, why?
+(require 'subr-x)
